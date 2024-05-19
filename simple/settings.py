@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = "django-insecure-q0o5=gbj=sz=!q%#44i)g($pxw=^5heaji0#j=pd+vn+i8=3-n"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8.134.214.157', 'localhost', '127.0.0.1']
 
@@ -81,6 +81,7 @@ WSGI_APPLICATION = "simple.wsgi.application"
 #         "NAME": BASE_DIR / "db.sqlite3",
 #     }
 # }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # 数据库引擎
@@ -142,6 +143,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'module_app', 'static'),
     os.path.join(BASE_DIR, 'common_app', 'static'),
 ]
+
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # for app in os.listdir(BASE_DIR):
 #     app_path = os.path.join(BASE_DIR, app)

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+</head>
+{% load static %}
+<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+<script src="{% static 'module/js/sign.js' %}"></script>
+<body>
+<form id="sign_form" action="/module/login" method="post">
+    {% csrf_token %}
+    <p>账号</p>
+    <input type="text">
+    <p>密码</p>
+    <input type="password">
+    <button id="sign_button" type="submit">注册</button>
+</form>
+</body>
+</html>
